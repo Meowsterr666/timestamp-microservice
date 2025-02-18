@@ -53,6 +53,7 @@ app.get(`/api/:date?`, function(req, res) {
   } else {
       const a = new Date(req.params.date);
       const b = a.toUTCString();
+      //Delete line 66
       console.log({ unix: Number(a), utc: b })
       res.json({ unix: Number(a), utc: b  });
   }
